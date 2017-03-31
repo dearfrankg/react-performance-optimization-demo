@@ -1,7 +1,7 @@
 {
-  "name": "react-basics-demo",
+  "name": "react-performance-optimization-demo",
   "version": "1.0.0",
-  "description": "Describe react-basics-demo here",
+  "description": "Describe react-performance-optimization-demo here",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-jss": "^5.4.0",
+    "reflexbox": "^2.2.3"
   },
   "devDependencies": {
     "nwb": "0.15.x"
