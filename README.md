@@ -1,3 +1,6 @@
-# react-basics-demo
+# react-performance-optimization-demo
 
-Describe react-basics-demo here.
+An explanation of how to optimize react by avoiding reconciliation.
+
+
+
