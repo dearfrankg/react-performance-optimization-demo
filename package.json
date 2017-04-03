@@ -30,6 +30,9 @@
   "license": "MIT",
   "repository": "",
   "jest": {
+    "coveragePathIgnorePatterns": [
+      "./src/utils/unit.js"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.transform.js"
     }
