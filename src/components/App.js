@@ -6,7 +6,6 @@ import PureApp from './PureApp'
 import MutationApp from './MutationApp'
 import ImmutableApp from './ImmutableApp'
 
-
 const App = (props) => (
   <div style={{marginTop: 50, textAlign: 'center'}}>
     <h2>Optimizing React by Avoiding Reconciliation</h2>
