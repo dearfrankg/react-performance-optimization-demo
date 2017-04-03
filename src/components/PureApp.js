@@ -50,29 +50,29 @@ export default class PureApp extends Component {
     const { classes } = this.props
     return (
       <div className={classes.goodApp} >
-        <h5>Using React.PureComponent</h5>
-        <button onClick={this.changeCount} >Change Count</button> 
-        <button onClick={this.changeColor} >Change Color</button> 
+        <h3>Using React.PureComponent</h3>
+        <button onClick={this.changeCount} >Change Count</button>
+        <button onClick={this.changeColor} >Change Color</button>
         <div><span>Count: {this.state.count}</span></div>
         <div><span>Color: {this.state.color}</span></div>
-        
+
         <CounterButton color={this.state.color} />
         {' '}
         <div style={{textAlign: 'left'}}>
           <p>
-            This renders the color button only when 
-            the color prop changes and without using 
+            This renders the color button only when
+            the color prop changes and without using
             shouldComponentUpdate (Good)
           </p>
           <p>
             This does what shouldComponentUpdate does behind the scenes.
-            You want to keep in mind this technique should only be use to 
-            help resolve a verified performance problem.  React runs 
+            You want to keep in mind this technique should only be use to
+            help resolve a verified performance problem.  React runs
             plenty fast on its own most of the time.
           </p>
         </div>
 
-        
+
       </div>
     );
   }
@@ -89,6 +89,3 @@ function styles() {
     }
   }
 }
-
-
-

@@ -60,23 +60,24 @@ export default class ShouldApp extends Component {
     const { classes } = this.props
     return (
       <div className={classes.goodApp} >
-        <h5>Using the shouldComponentUpdate method</h5>
-        <button onClick={this.changeCount} >Change Count</button> 
-        <button onClick={this.changeColor} >Change Color</button> 
+        <h3>Using the shouldComponentUpdate method</h3>
+        <button onClick={this.changeCount} >Change Count</button>
+        <button onClick={this.changeColor} >Change Color</button>
         <div><span>Count: {this.state.count}</span></div>
         <div><span>Color: {this.state.color}</span></div>
-        
+
         <CounterButton color={this.state.color} />
         {' '}
         <div style={{textAlign: 'left'}}>
           <p>
-            This renders the color button only when 
+            This renders the color button only when
             the color prop changes (Better) but maintaining the
-            shouldComponentUpdate method should be avoided if possible.
+            shouldComponentUpdate method should be avoided if possible
+            because they are difficult to write and maintain.
           </p>
         </div>
 
-        
+
       </div>
     );
   }
@@ -93,6 +94,3 @@ function styles() {
     }
   }
 }
-
-
-

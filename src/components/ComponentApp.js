@@ -50,12 +50,12 @@ export default class ComponentApp extends Component {
     const { classes } = this.props
     return (
       <div className={classes.goodApp} >
-        <h5>Using a straight React Component</h5>
-        <button onClick={this.changeCount} >Change Count</button> 
-        <button onClick={this.changeColor} >Change Color</button> 
+        <h3>Using a straight React Component</h3>
+        <button onClick={this.changeCount} >Change Count</button>
+        <button onClick={this.changeColor} >Change Color</button>
         <div><span>Count: {this.state.count}</span></div>
         <div><span>Color: {this.state.color}</span></div>
-        
+
         <CounterButton color={this.state.color} />
         {' '}
         <div style={{textAlign: 'left'}}>
@@ -63,9 +63,9 @@ export default class ComponentApp extends Component {
             This renders the color button everytime (hmmm).
           </p>
           <p>
-            React renders into virtual-dom then determines that the 
-            virtual-dom matches the real DOM, so does not update the DOM.
-            This is called React Reconciliation.
+            React renders into virtual-dom then determines if the
+            virtual-dom matches the real DOM and only renders when
+            they do not match. This is called React Reconciliation.
           </p>
         </div>
 
@@ -85,6 +85,3 @@ function styles() {
     }
   }
 }
-
-
-

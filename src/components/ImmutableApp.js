@@ -18,31 +18,30 @@ export default class WordAdder extends React.Component {
   }
 
   handleClick() {
-    // This section is bad style and causes a bug
     const words = this.state.words;
     words.push('ping');
-    this.setState({words: words});
+    this.setState({words: [...words]});
   }
 
   render() {
     const { classes } = this.props
     return (
       <div className={classes.goodApp} >
-        <h5>Gotcha using React.PureComponent</h5>
-        <button onClick={this.handleClick} >Add Word via Mutation </button>
-        <h6>Word List</h6>
+        <h3>Using React.PureComponent without Mutating</h3>
+        <button onClick={this.handleClick} >Add Word</button>
+        <h4>Word List</h4>
         <ListOfWords words={this.state.words} />
         {' '}
         <div style={{textAlign: 'left'}}>
           <p>
-            The add-button adds a word to the list via Mutation
-            using `words.push(newWord)`.  React.PureComponent
-            uses a shallow-compare to check props. It sees the 
-            oldWordList and the newWordList as equal because the have 
-            the same array ref.
+            The add-button adds a word to the list by creating
+            a new array using [...words, newWord].  React.PureComponent
+            uses a shallow-compare to check props. It sees the
+            oldWordList and the newWordList as different because they
+            have different array refs.
           </p>
           <p>
-            The result is that the updated word list does not render.(bad)
+            The result is that the updated word list does render.(good)
           </p>
         </div>
       </div>
@@ -62,6 +61,3 @@ function styles() {
     }
   }
 }
-
-
-
